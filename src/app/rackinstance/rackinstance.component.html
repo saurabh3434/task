@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-sm-4">
+    <div class="head1 bg-primary">
+      <h2>Rack Instances</h2>
+      <i class="material-icons" style="font-size:48px;color:red">control_point</i>
+      
+    </div>
+    <div class="aside">
+    <ul>
+      <li *ngFor = "let rack of racks" [class.selected]="rack===selectedRack" (click)="onSelect(rack)">
+        <a href="#">{{rack.name}}</a>
+      </li>
+    </ul>
+    </div>
+  </div>
+  <app-rackdetail [rack]="selectedRack"></app-rackdetail>
+</div>
